@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("g.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  width: 100vw;
+  height: 100vh;
+  color: rgba(255, 255, 255, 0.815);
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+h2 span {
+  text-transform: uppercase;
+  color: rgba(0, 255, 0, 0.63);
+  transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+h2 span::after {
+  content: "|";
+  font-size: 3.5rem;
+  position: relative;
+  top: -10px;
+  animation: pointer 0.625s infinite;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes pointer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

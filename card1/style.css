@@ -1,0 +1,192 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  height: 500px;
+  border-radius: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fdf7f7;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 70%;
+  bottom: 8px;
+  -webkit-box-shadow: 0px 14px 63px 1px black;
+          box-shadow: 0px 14px 63px 1px black;
+  border-radius: inherit;
+  z-index: -10;
+  background: blue;
+}
+
+.top {
+  width: 100%;
+  height: 45%;
+  border-radius: 0% 0% 42% 42% / 0% 9% 30% 30%;
+  background: #9b4560;
+  background: -webkit-gradient(linear, left top, right top, color-stop(41%, #9b4560), color-stop(77%, #d87385));
+  background: linear-gradient(90deg, #9b4560 41%, #d87385 77%);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .img {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .img .im {
+  height: 80%;
+  width: 55%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.top .img .im img {
+  width: 100%;
+  height: 120%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.bottom {
+  margin-top: -1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-family: helvetica;
+  -webkit-transform: scale(0.86);
+          transform: scale(0.86);
+}
+
+.bottom .t {
+  text-align: center;
+  color: #1a1919;
+}
+
+.bottom .t h5 {
+  margin-top: -10px;
+}
+
+.bottom .t h3 {
+  text-transform: uppercase;
+}
+
+.bottom .icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bottom .bottomtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-family: helvetica;
+}
+
+.bottom .bottomtext h5 {
+  margin-top: -10px;
+}
+
+.bottom .icons .ic {
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bottom .icons .ic:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #af536c;
+}
+/*# sourceMappingURL=style.css.map */

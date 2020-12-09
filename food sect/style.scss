@@ -1,0 +1,169 @@
+@import "_var";
+
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $bg;
+  display: grid;
+  place-items: center;
+}
+
+.section {
+  width: 80%;
+  height: 70%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 3rem;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    background: black;
+    height: 50px;
+    bottom: 0px;
+    box-shadow: 0px 20px 100px 1px black;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+  }
+}
+
+.left {
+  min-width: 320px;
+  flex: 1;
+  @media (max-width: 540px) {
+    transform: scale(0.8);
+    width: 100%;
+    margin-left: 0rem !important;
+  }
+}
+.right {
+  min-width: 320px;
+  flex: 1;
+}
+
+.left {
+  @include size;
+  @include centerrow;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: 2rem;
+  background: white;
+  border-radius: 2rem;
+  .top {
+    @include font;
+    margin-left: 3rem;
+    font-size: 3rem;
+  }
+  .mid {
+    width: 100;
+    @include centerrow;
+    .line {
+      height: 110%;
+      width: 7px;
+      background: $maincolor;
+    }
+    .text {
+      margin-left: 1rem;
+      padding: 5px;
+      h2 {
+        @include font;
+        font-weight: bolder;
+      }
+      h4 {
+        opacity: 0.9;
+        margin-top: 10px;
+      }
+      .span {
+        @include font;
+        opacity: 0.5;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.6rem;
+  margin-left: 1rem;
+  .one {
+    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: auto;
+    height: 50px;
+    background: $maincolor;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    @include font;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0px 0px 80px #da9999;
+    &:active {
+      background: white;
+      color: black;
+      box-shadow: 0px 0px 80px rgb(172, 167, 167);
+    }
+  }
+
+  .second {
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 80px rgb(172, 167, 167);
+    &:active {
+      color: white;
+      box-shadow: 0px 0px 80px #da9999;
+      background: $maincolor;
+    }
+  }
+}
+
+.right {
+  @include size;
+  background: white;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  @include centerrow;
+  position: relative;
+  padding: 1rem;
+  .img {
+    @include size;
+    img {
+      @include size;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .buy {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    @include font;
+    font-size: unset;
+    background: #000;
+    color: white;
+    padding: 1rem;
+    border-radius: 16% 16% 70% 17% / 13% 8% 52% 22%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
